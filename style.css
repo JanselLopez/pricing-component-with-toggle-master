@@ -1,0 +1,266 @@
+:root {
+  --vlGrayBlue: hsl(240, 78%, 98%);
+  --lGrayBlue: hsl(234, 14%, 74%);
+  --grayBlue: hsl(233, 13%, 49%);
+  --dGrayBlue: hsl(232, 13%, 33%);
+  --purple-light: hsl(236, 72%, 79%);
+  --purple: hsl(237, 63%, 64%);
+}
+
+body {
+  background-color: var(--vlGrayBlue);
+  font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header p {
+  color: var(--lGrayBlue);
+}
+
+section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 13.55% 24.3% 24.3% 24.3% 13.55%;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding-block: 40px;
+  color: var(--dGrayBlue);
+  background-color: #fff;
+}
+
+span {
+  font-size: 2.8vw;
+  margin-right: 8px;
+}
+
+a {
+  width: 20vw;
+  padding-block: 14px;
+  text-align: center;
+  color: var(--vlGrayBlue);
+  border-radius: 8px;
+  letter-spacing: 2px;
+  margin-block: 4px;
+  font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 70px;
+  font-size: xx-large;
+  color: var(--grayBlue);
+}
+
+h2 {
+  font-size: 1.25vw;
+  margin: 5px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 5vw;
+  margin: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -2px;
+}
+
+p {
+  font-size: 15px;
+}
+
+img:first-child {
+  top: 0;
+  right: 0;
+}
+img:nth-child(2) {
+  bottom: 0;
+  left: 0;
+}
+
+img {
+  position: absolute;
+  z-index: -1;
+}
+
+#switch-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+#switch {
+  width: 55px;
+  height: 32px;
+  border-radius: 20px;
+  margin: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+#white-circle {
+  width: 24px;
+  height: 24px;
+  margin-inline: 5px;
+  border-radius: 20px;
+  background-color: var(--vlGrayBlue);
+}
+
+#plan-basic {
+  grid-column-start: 2;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#plan-pro {
+  grid-column-start: 3;
+  background-image: linear-gradient(160deg, var(--purple-light), var(--purple));
+  color: var(--vlGrayBlue);
+  z-index: 2;
+}
+
+#plan-master {
+  grid-column-start: 4;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#plan-basic,
+#plan-master {
+  box-shadow: 0px 0px 20px 10px hsla(234, 14%, 74%, 0.233);
+  z-index: 1;
+  margin-block: 25px;
+  padding-block: 25px;
+}
+
+#plan-master h2,
+#plan-basic h2 {
+  color: var(--grayBlue);
+}
+
+.item-info {
+  color: var(--grayBlue);
+  margin: 16px;
+}
+
+.separator {
+  background-color: var(--dGrayBlue);
+  height: 1px;
+  width: 20vw;
+  opacity: 0.3;
+}
+#plan-pro a {
+  background-color: var(--vlGrayBlue);
+  background-image: none;
+  color: var(--purple);
+}
+
+#plan-pro .item-info {
+  color: var(--vlGrayBlue);
+}
+
+#plan-pro .separator {
+  background-color: var(--vlGrayBlue);
+}
+
+#switch,
+a {
+  background-image: linear-gradient(
+    to right,
+    var(--purple-light),
+    var(--purple)
+  );
+}
+article .separator:nth-child(9) {
+  margin-bottom: 30px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 412px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  article {
+    margin: 5%;
+  }
+  h3 {
+    font-size: 400%;
+  }
+  span {
+    font-size: 50%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  a,
+  .separator {
+    width: 75vw;
+  }
+  img:first-child {
+    width: 50%;
+  }
+  img:nth-child(2) {
+    display: none;
+  }
+  #plan-basic,
+  #plan-master {
+    border-radius: 10px;
+  }
+  #plan-pro {
+    box-shadow: 0px 0px 20px 10px hsla(234, 14%, 74%, 0.233);
+  }
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+#switch:hover {
+  background-color: var(--lGrayBlue);
+  background-image: none;
+}
+
+#plan-pro a:hover {
+  background-color: transparent;
+  border-color: var(--vlGrayBlue);
+  color: var(--vlGrayBlue);
+}
+
+#plan-basic a:hover,
+#plan-master a:hover {
+  background-image: none;
+  background-color: transparent;
+  border-color: var(--purple);
+  color: var(--purple);
+}

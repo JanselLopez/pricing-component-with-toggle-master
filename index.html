@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <h1>Our Pricing</h1>
+      <div id="switch-container">
+        <p>Annually</p>
+        <div>
+          <div id="switch" onclick="setPricing()">
+            <div id="white-circle"></div>
+          </div>
+        </div>
+        <p>Monthly</p>
+      </div>
+    </header>
+
+    <section role="main">
+      <img src="images/bg-top.svg" />
+      <img id="bottom" src="images/bg-bottom.svg" />
+      <article id="plan-basic">
+        <h2>Basic</h2>
+        <h3>
+          <span> &dollar; </span>
+          <div class="price">19.99</div>
+        </h3>
+        <div class="separator"></div>
+        <p class="item-info">500 GB Storage</p>
+        <div class="separator"></div>
+        <p class="item-info">2 Users Allowed</p>
+        <div class="separator"></div>
+        <p class="item-info">Send up to 3 GB</p>
+        <div class="separator"></div>
+        <a> LEARN MORE</a>
+      </article>
+      <article id="plan-pro">
+        <h2>Professional</h2>
+        <h3>
+          <span> &dollar; </span>
+          <div class="price">24.99</div>
+        </h3>
+        <div class="separator"></div>
+        <p class="item-info">1 TB Storage</p>
+        <div class="separator"></div>
+        <p class="item-info">5 Users Allowed</p>
+        <div class="separator"></div>
+        <p class="item-info">Send up to 10 GB</p>
+        <div class="separator"></div>
+        <a> LEARN MORE</a>
+      </article>
+      <article id="plan-master">
+        <h2>Master</h2>
+        <h3>
+          <span> &dollar; </span>
+          <div class="price">39.99</div>
+        </h3>
+        <div class="separator"></div>
+        <p class="item-info">2 TB Storage</p>
+        <div class="separator"></div>
+        <p class="item-info">10 Users Allowed</p>
+        <div class="separator"></div>
+        <p class="item-info">Send up to 20 GB</p>
+        <div class="separator"></div>
+        <a> LEARN MORE</a>
+      </article>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
